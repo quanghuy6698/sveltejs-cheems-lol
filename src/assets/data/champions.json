@@ -1,0 +1,14 @@
+{
+  "allChampions": [
+    {
+      "name": "Akali",
+      "avatarUrl": "src/assets/img/akali.png",
+      "skillsSet": {
+        "Q": "Skill Q",
+        "W": "Skill W",
+        "E": "Skill E",
+        "R": "Skill R"
+      }
+    }
+  ]
+}

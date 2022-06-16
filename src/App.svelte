@@ -1,21 +1,12 @@
 <script lang="ts">
-  let name = "Svelte.js";
+  import Header from "./app/header/Header.svelte";
+  import Footer from "./app/footer/Footer.svelte";
+  import Content from "./app/content/Content.svelte";
 </script>
 
-<div class="container">
-  <div class="title">
-    <h1 class="title__text">Hello {name}</h1>
-  </div>
-
-  <div class="content">
-    <div class="content-item">
-      <div class="content-item__img" />
-      <div class="content-item__content">
-        dsk dsf dsdslj sdfhdskf dhfudsu dsufdsfhsd
-      </div>
-    </div>
-  </div>
-</div>
+<Header />
+<Content />
+<Footer />
 
 <style>
   @media screen and (max-width: 600px) {
