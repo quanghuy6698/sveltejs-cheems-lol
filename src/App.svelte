@@ -1,67 +1,58 @@
 <script lang="ts">
-  import Header from "./app/header/Header.svelte";
-  import Footer from "./app/footer/Footer.svelte";
-  import Content from "./app/content/Content.svelte";
+  import { Router, Route, Link } from "svelte-navigator";
+  import Header from "./app/components/header/Header.svelte";
+  import Footer from "./app/components/footer/Footer.svelte";
+  import Home from "./app/pages/home/Home.svelte";
 </script>
 
 <Header />
-<Content />
+<Router>
+  <nav class="nav">
+    <div class="nav__el-wrapper">
+      <div class="nav__el">
+        <Link to="/">Home</Link>
+      </div>
+    </div>
+    <div class="nav__el-wrapper">
+      <div class="nav__el">
+        <Link to="maskman">Maskman</Link>
+      </div>
+    </div>
+    <div class="nav__el-wrapper">
+      <div class="nav__el">
+        <Link to="mage">Mage</Link>
+      </div>
+    </div>
+  </nav>
+  <div>
+    <Route path="" primary={false}>
+      <Home />
+    </Route>
+
+    <Route path="maskman" primary={false}>maskman</Route>
+
+    <Route path="mage" primary={false}>mage</Route>
+  </div>
+</Router>
 <Footer />
 
 <style>
-  @media screen and (max-width: 600px) {
-    .container {
-      width: 96%;
-      margin: 0 auto;
-      background-color: #ccc;
-    }
-  }
-
-  @media screen and (min-width: 600px) {
-    .container {
-      width: 600px;
-      margin: 0 auto;
-      background-color: #ccc;
-    }
-  }
-
-  .title {
-    background-color: #ffffff;
-    border-radius: 8px;
-    margin-top: 8px;
-    padding: 16px;
-  }
-
-  .title__text {
-    color: tomato;
-  }
-
-  .content {
-    background-color: #ffffff;
-    margin-top: 8px;
-    border-radius: 8px;
-    padding: 16px;
-
+  .nav {
+    background-color: springgreen;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    /* padding-top: 8px;
+    padding-bottom: 8px; */
   }
-
-  .content-item {
-    background-color: aqua;
-    width: 300px;
-    height: 300px;
-    padding: 8px;
-    border-radius: 8px;
+  .nav__el-wrapper {
+    background-color: transparent;
+    padding-right: 4px;
+    padding-left: 4px;
   }
-
-  .content-item__img {
-    float: left;
-    width: 150px;
-  }
-
-  .content-item__content {
-    background-color: aqua;
+  .nav__el {
+    background-color: royalblue;
     padding: 8px;
   }
 </style>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Champion from "../champion/Champion.svelte";
+  import Champion from "../../components/champion/Champion.svelte";
 </script>
 
 <div class="content">
