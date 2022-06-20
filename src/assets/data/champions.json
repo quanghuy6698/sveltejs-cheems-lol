@@ -1,14 +1,8 @@
 {
   "allChampions": [
     {
-      "name": "Akali",
-      "avatarUrl": "src/assets/img/akali.png",
-      "skillsSet": {
-        "Q": "Skill Q",
-        "W": "Skill W",
-        "E": "Skill E",
-        "R": "Skill R"
-      }
+      "name": "Aatrox",
+      "imgUrl": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt570145160dd39dca/5db05fa8347d1c6baa57be25/RiotX_ChampionList_aatrox.jpg"
     }
   ]
 }
