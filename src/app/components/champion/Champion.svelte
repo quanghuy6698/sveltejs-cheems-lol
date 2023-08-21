@@ -1,15 +1,29 @@
 <script lang="ts">
-  export let champInfo;
+  import { beforeUpdate } from "svelte";
+
+  export let champ;
+  let champImg;
+
+  beforeUpdate(() => {
+    champImg = './img/cheems-lol/' + champ.img;
+  });
+
+
+  function errImg(){
+    champImg = './img/cheems-lol/cheems.png';
+  }
 </script>
 
 <div class="champion">
   <div
     class="champion__content-wrapper"
-    style="--champ-img: url({champInfo.champImg});"
+    style="background-image: url({champImg});"
+    on:error={errImg} 
   >
-    <div class="champion__name">{champInfo.champName}</div>
+    <div class="champion__name">{champ.name}</div>
   </div>
 </div>
+
 
 <style>
   .champion {
@@ -20,7 +34,6 @@
   }
 
   .champion__content-wrapper {
-    background-image: var(--champ-img);
     background-size: cover;
     width: 276px;
     height: 276px;
